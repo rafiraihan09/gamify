@@ -1,0 +1,112 @@
+.ul-sidebar {
+    justify-content: flex-start;
+    gap: 20px;
+    border-left: 2px solid var(--ul-primary);
+
+    &-header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding-bottom: clamp(20px, 1.58vw, 30px);
+    }
+
+    &-closer {
+        display: inline-flex;
+        padding: 0;
+        font-size: clamp(22px, 1.26vw, 28px);
+
+        &:hover {
+            color: var(--ul-primary);
+        }
+
+        i {
+            display: inline-flex;
+        }
+    }
+
+    &-about {
+        .title {
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: clamp(7px, 0.53vw, 10px);
+            display: inline-block;
+        }
+
+        .descr {
+            font-size: clamp(13px, 0.84vw, 16px);
+        }
+    }
+
+    &-products-wrapper {
+        display: flex;
+        align-items: center;
+        // gap: 20px;
+
+        .ul-product {
+            box-shadow: 0px 4px 60px 10px rgba(239, 40, 83, 0);
+            transition: 0.2s linear;
+            box-shadow: 0px 4px 60px 10px rgba(239, 40, 83, 0.06);
+        }
+    }
+
+    &-products-slider {
+        padding: 40px;
+        margin: -40px;
+
+        &-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: var(--white);
+            padding-left: 40px;
+
+            button {
+                transform: rotate(90deg);
+
+                &:hover {
+                    color: var(--ul-primary);
+                }
+            }
+        }
+    }
+
+    &-footer {
+        margin-top: auto;
+
+        &-title {
+            color: var(--black);
+            font-weight: 600;
+            font-size: clamp(20px, 1.26vw, 24px);
+            margin-bottom: clamp(7px, 0.53vw, 10px);
+            display: inline-block;
+        }
+
+        &-social {
+            display: flex;
+            flex-wrap: wrap;
+            gap: clamp(7px, 0.53vw, 10px);
+
+            a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                border: 1px solid rgba(0, 0, 0, 0.4);
+                color: var(--black);
+                height: clamp(37px, 2.1vw, 40px);
+
+                &:hover {
+                    color: var(--white);
+                    background-color: var(--ul-primary);
+                    border-color: var(--ul-primary);
+                }
+
+                i {
+                    display: inline-flex;
+                }
+            }
+        }
+    }
+}

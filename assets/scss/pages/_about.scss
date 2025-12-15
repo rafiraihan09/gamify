@@ -1,0 +1,101 @@
+.ul-about-cover-img {
+    border-radius: clamp(15px, 2.10vw, 40px);
+    overflow: hidden;
+    margin-top: clamp(40px, 4.20vw, 80px);
+
+    img {
+        width: 100%;
+        aspect-ratio: 1800/632;
+        object-fit: cover;
+    }
+}
+
+
+.ul-about {
+    padding: clamp(40px, 4.20vw, 80px) 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    .ul-section-title {
+        margin-bottom: clamp(6px, 0.63vw, 12px);
+    }
+
+    .ul-bs-row {
+        --bs-gutter-x: clamp(20px, 3.15vw, 60px);
+        --bs-gutter-y: clamp(20px, 3.15vw, 60px);
+    }
+
+    &-img {
+        border-radius: clamp(15px, 2.10vw, 40px);
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            aspect-ratio: 694/559;
+            object-fit: cover;
+        }
+    }
+}
+
+.ul-more-about {
+    background: var(--ul-gradient);
+    border-radius: clamp(25px, 2.1vw, 40px);
+    padding: clamp(40px, 4.20vw, 80px) clamp(25px, 2.63vw, 50px);
+    color: var(--white);
+
+    &-heading {
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: clamp(15px, 1.58vw, 30px);
+        margin-bottom: clamp(17px, 1.84vw, 35px);
+
+        .ul-section-title {
+            color: var(--white);
+            margin-bottom: clamp(6px, 0.63vw, 12px);
+        }
+
+        &-descr {
+            margin: auto;
+            max-width: 50%;
+            font-size: clamp(13px, 0.84vw, 16px);
+
+            @include xxl {
+                max-width: 60%;
+            }
+
+            @include md {
+                max-width: 80%;
+            }
+
+            @include sm {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &-row {
+        --bs-gutter-x: clamp(46px, 5.04vw, 96px);
+        --bs-gutter-y: clamp(46px, 5.04vw, 96px);
+
+        @include xxl {
+            --bs-gutter-x: clamp(26px, 3.04vw, 96px);
+            --bs-gutter-y: clamp(26px, 3.04vw, 96px);
+        }
+    }
+
+    &-point {
+        @include xs {
+            text-align: center;
+        }
+
+        &-title {
+            font-size: clamp(24px, 1.58vw, 30px);
+            font-weight: 400;
+            margin-bottom: clamp(7px, 0.74vw, 14px);
+        }
+
+        &-descr {
+            font-size: clamp(13px, 0.84vw, 16px);
+            margin-bottom: 0;
+        }
+    }
+}

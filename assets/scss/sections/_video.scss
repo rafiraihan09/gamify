@@ -1,0 +1,52 @@
+.ul-video {
+    position: relative;
+    margin: clamp(40px, 4.20vw, 80px) 0;
+    border-radius: clamp(15px, 2.10vw, 40px);
+    overflow: hidden;
+    aspect-ratio: 1800/740;
+
+    &-cover {
+        aspect-ratio: 1800/740;
+        object-fit: cover;
+        transition: none;
+        position: absolute;
+        height: 1000px;
+
+        @include xs {
+            aspect-ratio: 445/262;
+        }
+    }
+
+    &-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: clamp(62px, 6.94vw, 132px);
+        aspect-ratio: 1/1;
+        background-color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: clamp(4px, 0.21vw, 4px);
+        font-size: clamp(18px, 1.58vw, 30px);
+        color: var(--ul-primary);
+        animation: shadowAnim 2s ease-in infinite;
+
+        &:hover {
+            background-color: var(--ul-primary);
+            color: var(--white);
+        }
+    }
+}
+
+@keyframes shadowAnim {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5), 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 0 40px transparent, 0 0 0 20px transparent;
+    }
+}

@@ -1,0 +1,133 @@
+.ul-blogs {
+    padding: clamp(40px, 4.20vw, 80px) 0;
+
+    &-heading-btn {
+        display: inline-flex;
+        text-transform: uppercase;
+        align-items: center;
+        gap: clamp(7px, 0.53vw, 10px);
+        font-size: clamp(13px, 0.84vw, 16px);
+        color: var(--black);
+
+        i {
+            color: var(--ul-primary);
+        }
+    }
+}
+
+
+.ul-blog {
+    &-img {
+        overflow: hidden;
+        border-radius: clamp(17px, 1.05vw, 20px);
+        margin-bottom: clamp(12px, 1.05vw, 20px);
+        position: relative;
+
+        img {
+            width: 100%;
+            aspect-ratio: 450/300;
+        }
+    }
+
+    .date {
+        position: absolute;
+        top: clamp(17px, 1.05vw, 20px);
+        left: clamp(17px, 1.05vw, 20px);
+        background-color: var(--ul-primary);
+        border-radius: clamp(7px, 0.53vw, 10px);
+        display: inline-block;
+        overflow: hidden;
+        text-align: center;
+        color: var(--white);
+        padding: clamp(8px, 0.63vw, 12px) clamp(12px, 0.84vw, 16px);
+
+        .number {
+            display: block;
+            font-weight: 500;
+            font-size: clamp(20px, 1.26vw, 24px);
+            line-height: 0.8;
+            margin-bottom: clamp(3px, 0.32vw, 6px);
+        }
+
+        .txt {
+            line-height: 0.8;
+            display: block;
+            font-weight: 400;
+            font-size: clamp(11px, 0.74vw, 14px);
+        }
+    }
+
+    &-infos {
+        display: flex;
+        align-items: center;
+        gap: clamp(15px, 1.58vw, 30px);
+        margin-bottom: clamp(8px, 0.58vw, 11px);
+        font-size: clamp(12px, 0.729vw, 14px);
+        font-weight: 500;
+        color: var(--ul-primary);
+    }
+
+    &-info {
+        display: flex;
+        align-items: center;
+        gap: clamp(5px, 0.42vw, 8px);
+        line-height: 1;
+
+        i {
+            font-size: clamp(15px, 0.95vw, 18px);
+            color: var(--ttRed);
+        }
+    }
+
+    &-title {
+        font-weight: 600;
+        font-size: clamp(20px, 1.26vw, 24px);
+        line-height: 1.4;
+        margin-bottom: clamp(4px, 0.74vw, 14px);
+
+
+        a {
+            color: var(--black);
+            display: inline-block;
+
+            &:hover {
+                color: var(--ul-primary);
+            }
+        }
+    }
+
+    &-descr {
+        font-size: clamp(13px, 0.84vw, 16px);
+        line-height: 1.6;
+        margin-bottom: clamp(17px, 1.42vw, 27px);
+    }
+
+    &-btn {
+        font-weight: 400;
+        color: var(--black);
+        font-size: clamp(13px, 0.84vw, 16px);
+        display: inline-flex;
+        gap: clamp(6px, 0.53vw, 10px);
+        align-items: center;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        height: clamp(38px, 2.31vw, 44px);
+        padding: 0 clamp(10px, 1.05vw, 20px);
+        border-radius: 999px;
+        text-transform: uppercase;
+
+        &:hover {
+            color: var(--white);
+            border-color: var(--ul-primary);
+            background-color: var(--ul-primary);
+
+            .icon {
+                color: var(--white);
+            }
+        }
+
+        .icon {
+            color: var(--ul-primary);
+            padding-top: 8px;
+        }
+    }
+}

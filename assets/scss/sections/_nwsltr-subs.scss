@@ -1,0 +1,102 @@
+.ul-nwsltr-subs {
+    border-radius: clamp(15px, 2.10vw, 40px);
+    background: url(../img/nwsltr-subs-bg.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    padding-top: clamp(60px, 5.78vw, 110px);
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        background: var(--ul-gradient);
+        opacity: 80%;
+    }
+
+    &-form-wrapper {
+        background: url(../img/subs-form-bg.png) #FEF4F6 no-repeat center center;
+        background-size: cover;
+        padding: clamp(25px, 2.89vw, 55px) clamp(10px, 7.62vw, 145px);
+        border-radius: 20px 20px 0 0;
+
+        @include xxs {
+            padding: clamp(25px, 2.89vw, 55px) 10px;
+        }
+
+        .icon {
+            font-size: clamp(35px, 2.63vw, 50px);
+            width: max-content;
+            max-width: 100%;
+            line-height: 1;
+            margin: auto;
+            margin-bottom: clamp(15px, 1.73vw, 33px);
+        }
+    }
+
+    &-form {
+        display: flex;
+        border: 1px solid #FFA9A9;
+        height: clamp(45px, 4.20vw, 80px);
+        background-color: var(--white);
+        border-radius: 999px;
+        padding: clamp(5px, 0.42vw, 8px);
+
+        @include xs {
+            flex-direction: column;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        input {
+            border: none;
+            width: 100%;
+            padding: 0 clamp(15px, 1.58vw, 30px);
+
+            @include xs {
+                padding: 5px clamp(15px, 1.58vw, 30px) 10px;
+            }
+        }
+
+        button {
+            flex-shrink: 0;
+            background: var(--ul-gradient);
+            border-radius: 999px;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: clamp(5px, 0.53vw, 10px);
+            padding: 0 clamp(15px, 1.58vw, 30px);
+            position: relative;
+            z-index: 1;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: clamp(13px, 0.84vw, 16px);
+            justify-content: center;
+
+            @include xs {
+                height: 40px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                background: linear-gradient(-90deg, var(--ul-primary) 0%, var(--ul-secondary) 100%);
+                border-radius: 999px;
+                transition: 0.4s ease;
+            }
+
+            &:hover::before {
+                opacity: 0;
+            }
+
+            i {
+                padding-top: 3px;
+            }
+        }
+    }
+}

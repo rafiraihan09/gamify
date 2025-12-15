@@ -1,0 +1,170 @@
+// blog page 2 styles
+.ul-blog {
+    &-big {
+        margin-bottom: clamp(20px, 2.10vw, 40px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .ul-blog-img {
+            border: 4px solid #F8E6E2;
+
+            img {
+                aspect-ratio: 1050/450;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .ul-blog-title {
+            font-weight: 700;
+            font-size: clamp(22px, 1.89vw, 36px);
+        }
+
+        .ul-blog-descr {
+            color: #676666;
+            font-size: clamp(13px, 0.84vw, 16px);
+        }
+
+        &-btn {
+            background: var(--ul-gradient);
+            border: none;
+            height: clamp(45px, 2.94vw, 56px);
+            color: var(--white);
+
+            i {
+                color: var(--white);
+            }
+
+            &:hover {
+                color: var(--white);
+                background: linear-gradient(-90deg, var(--ul-primary) 0%, var(--ul-secondary) 100%);
+            }
+        }
+    }
+
+    &-sidebar {
+        &-widget {
+            margin-bottom: clamp(15px, 1.58vw, 30px);
+
+            &-title {
+                font-weight: 600;
+                font-size: clamp(20px, 1.26vw, 24px);
+                color: var(--black);
+                margin-bottom: clamp(12px, 1.16vw, 22px);
+            }
+
+            &-content {
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+                padding: clamp(14px, 1.26vw, 24px);
+            }
+
+            &.ad-banner {
+                border-radius: 10px;
+                overflow: hidden;
+
+                img {
+                    aspect-ratio: 330/390;
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &-search-form {
+        display: flex;
+        align-items: flex-end;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding-bottom: clamp(7px, 0.53vw, 10px);
+
+        input {
+            width: 100%;
+            border: none;
+        }
+
+        button {
+            flex-shrink: 0;
+
+            &:hover {
+                color: var(--ul-primary);
+            }
+        }
+    }
+
+    &-recent-post {
+        display: flex;
+        align-items: flex-start;
+        gap: clamp(10px, 0.79vw, 15px);
+        margin-bottom: clamp(15px, 1.58vw, 30px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .img {
+            flex-shrink: 0;
+            overflow: hidden;
+            border-radius: 10px;
+
+            img {
+                width: 80px;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+            }
+        }
+
+        .date {
+            font-size: clamp(13px, 0.84vw, 16px);
+            color: var(--ul-primary);
+            display: flex;
+            align-items: center;
+            gap: clamp(12px, 0.79vw, 15px);
+
+            .icon {
+                padding-top: 4px;
+                font-size: clamp(15px, 0.95vw, 18px);
+            }
+        }
+
+        .title {
+            font-size: clamp(15px, 0.95vw, 18px);
+            line-height: 1.4;
+            margin-bottom: 0;
+
+            a {
+                font-weight: 600;
+                color: var(--black);
+
+                &:hover {
+                    color: var(--ul-primary);
+                }
+            }
+        }
+    }
+
+    &-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: clamp(7px, 0.53vw, 10px);
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: clamp(34px, 1.94vw, 37px);
+            padding: 0 clamp(10px, 0.79vw, 15px);
+            border-radius: 999px;
+            background-color: #FAFAFA;
+            color: var(--black);
+            font-size: clamp(13px, 0.84vw, 16px);
+
+            &:hover {
+                background-color: var(--ul-primary);
+                color: var(--white);
+            }
+        }
+    }
+}

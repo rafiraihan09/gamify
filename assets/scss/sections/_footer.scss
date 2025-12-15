@@ -1,0 +1,156 @@
+.ul-footer {
+    background-color: var(--black);
+
+    .ul-inner-container {
+        --container-space-x: 30px;
+        max-width: calc(clamp(0px, 79.61vw, 1515px) + var(--container-space-x));
+        padding-left: calc(var(--container-space-x) / 2);
+        padding-right: calc(var(--container-space-x) / 2);
+        margin: auto;
+    }
+
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: clamp(22px, 1.58vw, 30px);
+        padding: clamp(40px, 4.20vw, 80px) 0 clamp(25px, 2.63vw, 50px);
+
+        @include md {
+            flex-wrap: wrap;
+        }
+
+        >* {
+            flex-shrink: 0;
+            flex: calc(100% / 6);
+
+            @include md {
+                flex: auto;
+            }
+
+            @include xs {
+                flex: calc(100% / 4);
+            }
+
+            @include xxs {
+                flex: calc(100% / 3);
+            }
+        }
+
+        &-widget {
+            &-title {
+                font-weight: 600;
+                font-size: clamp(20px, 1.26vw, 24px);
+                color: var(--white);
+                margin-bottom: clamp(10px, 0.89vw, 17px);
+            }
+
+            &-links {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: clamp(1px, 0.21vw, 4px);
+
+                a {
+                    display: inline-block;
+                    color: #A1A1A1;
+                    font-size: clamp(13px, 0.84vw, 16px);
+
+                    &:hover {
+                        color: var(--ul-primary);
+                    }
+                }
+            }
+        }
+    }
+
+    &-middle {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: clamp(25px, 2.10vw, 40px) 0;
+        gap: clamp(22px, 1.58vw, 30px);
+        border: solid rgba(255, 255, 255, 0.25);
+        border-width: 1px 0;
+        flex-wrap: wrap;
+
+        *> {
+            flex: auto;
+        }
+
+        &-widget {
+            &-title {
+                font-size: clamp(17px, 1.05vw, 20px);
+                font-weight: 500;
+                line-height: 110%;
+                color: var(--white);
+                margin-bottom: clamp(12px, 1.58vw, 30px);
+            }
+
+            .app-links,
+            .social-links {
+                display: flex;
+                gap: clamp(10px, 0.79vw, 15px);
+
+                a,
+                button {
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    border-radius: 999px;
+                    display: inline-flex;
+                    width: 43px;
+                    aspect-ratio: 1/1;
+                    align-items: center;
+                    justify-content: center;
+                    color: rgba(255, 255, 255, 0.8);
+
+                    &:hover {
+                        background-color: var(--white);
+                        border-color: var(--white);
+                        color: var(--ul-primary);
+                    }
+
+                    i {
+                        display: inline-flex;
+                    }
+                }
+            }
+
+            .contact-nums {
+                color: var(--white);
+                font-weight: 500;
+                font-size: clamp(20px, 1.58vw, 30px);
+
+                a {
+                    color: var(--white);
+
+                    &:hover {
+                        color: var(--ul-primary);
+                    }
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: clamp(25px, 2.10vw, 40px) 0;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        .copyright-txt {
+            margin-bottom: 0;
+            font-size: clamp(13px, 0.84vw, 16px);
+            color: #676666;
+
+            a {
+                color: #676666;
+
+                &:hover {
+                    color: var(--ul-primary);
+                }
+            }
+        }
+    }
+}

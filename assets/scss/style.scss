@@ -1,0 +1,69 @@
+/*!--------------------
+Template Name: Glamics - The Fashion & Apparel E-Commerce HTML Template
+Author: tempticspro
+Version: 1.0
+
+CSS INDEX
+=================== 
+01. CUSTOM PROPERTIES
+02. GLOBAL
+03. Components
+04. Sidebar
+05. Header
+06. Hero
+07. Categories
+08. Products
+09. Ad
+10. Video
+11. Sub Banner
+12. Flash Sale
+13. Reviews
+14. Newsletter Subscription
+15. Blog
+16. Gallery
+17. Footer
+
+--- INNER PAGES
+16. Products Page
+17. Product Details Page
+18. Cart Page
+19. Checkout Page
+20. About Page
+21. Store Page
+22. Blog Page
+23. Blog Details Page
+24. Contact Page
+
+*/
+
+@import "main/breakpoints";
+@import "main/variables";
+@import "main/global";
+@import "main/components";
+
+// sections
+@import "sections/sidebar";
+@import "sections/header";
+@import "sections/hero";
+@import "sections/categories";
+@import "sections/products";
+@import "sections/ad";
+@import "sections/video";
+@import "sections/sub-banner";
+@import "sections/flash-sale";
+@import "sections/reviews";
+@import "sections/nwsltr-subs";
+@import "sections/blog";
+@import "sections/gallery";
+@import "sections/footer";
+
+// inner pages
+@import "pages/p-products";
+@import "pages/product-details";
+@import "pages/cart";
+@import "pages/checkout";
+@import "pages/about";
+@import "pages/store";
+@import "pages/p-blog";
+@import "pages/blog-details";
+@import "pages/contact";

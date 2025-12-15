@@ -1,0 +1,214 @@
+.ul-banner {
+    display: flex;
+    gap: clamp(15px, 1.58vw, 30px);
+}
+
+.ul-banner-slider {
+    max-width: clamp(310px, 59.12vw, 1125px);
+    border-radius: 30px;
+
+    @include sm {
+        max-width: calc(100vw - (clamp(15px, 3.15vw, 60px)*2));
+    }
+
+    @include xxs {
+        border-radius: 0;
+    }
+
+    &-wrapper {
+        width: max-content;
+        position: relative;
+        z-index: 11;
+        background-color: var(--white);
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            right: 100%;
+            background-color: var(--white);
+            top: 0;
+            height: 100%;
+            width: 60px;
+        }
+
+        &::after {
+            width: 10px;
+            left: 100%;
+            right: auto;
+        }
+    }
+
+    &-nav-wrapper {
+        @include xxs {
+            position: absolute;
+            inset: 0;
+            aspect-ratio: 400/460;
+        }
+    }
+
+    &-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        z-index: 1;
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px 0 0 20px;
+
+        @include xxs {
+            border-radius: 20px 20px 0 0;
+            flex-direction: row;
+            right: 50%;
+            transform: translateX(50%);
+            top: auto;
+            bottom: 0;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            font-size: 22px;
+            color: var(--black);
+
+            &:first-child {
+                transform: rotate(180deg);
+
+                @include xxs {
+                    transform: rotate(90deg);
+                }
+            }
+
+            @include xxs {
+                transform: rotate(-90deg);
+            }
+
+            &:hover {
+                color: var(--ul-primary);
+            }
+
+            span,
+            i {
+                display: inline-flex;
+            }
+        }
+    }
+}
+
+.ul-banner-slide {
+    &-img {
+        @include xxs {
+            margin-bottom: clamp(20px, 1.58vw, 30px);
+        }
+
+        img {
+
+            @include xxs {
+                width: 100%;
+                aspect-ratio: 400/459;
+                object-fit: cover;
+                object-position: 100%;
+                border-radius: 30px;
+            }
+        }
+    }
+
+    &-txt {
+        max-width: 58%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: clamp(15px, 3.15vw, 60px);
+
+        @include xs {
+            max-width: 68%;
+        }
+
+        @include xxs {
+            max-width: 100%;
+            position: static;
+            transform: translateY(0);
+        }
+    }
+
+    &-sub-title {
+        font-weight: 400;
+        font-size: clamp(16px, 1.05vw, 20px);
+        letter-spacing: 0.3em;
+        color: var(--ul-primary);
+        margin-bottom: clamp(10px, 1.26vw, 24px);
+        display: inline-block;
+    }
+
+    &-title {
+        font-size: clamp(32px, 3.42vw, 65px);
+        font-weight: 600;
+        line-height: 108%;
+        letter-spacing: -0.03em;
+        color: var(--black);
+        margin-bottom: clamp(7px, 0.89vw, 17px);
+        // mix-blend-mode: difference;
+        // color: var(--white);
+    }
+
+    &-price {
+        font-size: clamp(13px, 0.84vw, 16px);
+        display: flex;
+        align-items: center;
+        gap: clamp(6px, 0.79vw, 15px);
+        margin-bottom: clamp(13px, 1.21vw, 23px);
+
+        .price {
+            font-weight: 600;
+            font-size: clamp(18px, 1.58vw, 30px);
+            color: var(--ul-primary);
+        }
+    }
+
+    .ul-btn {
+        &:hover {
+            background-color: var(--ul-primary);
+            color: var(--white);
+        }
+    }
+}
+
+.ul-banner-img-slider-wrapper {
+    // max-width: clamp(310px, 33.89vw, 645px);
+    max-width: clamp(270px, 23.65vw, 450px);
+
+    @include md {
+        max-width: clamp(220px, 19.65vw, 450px);
+    }
+
+    @include sm {
+        display: none;
+    }
+}
+
+.ul-banner-img-slider {
+    border-radius: 20px;
+    height: 100%;
+    margin-right: calc(0% - clamp(0px, 12.61vw, 240px));
+
+    img {
+        height: 100%;
+        width: 100%;
+        // aspect-ratio: 450/800;
+        border-radius: 20px;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+
+        @include xl {
+            // aspect-ratio: 310/538;
+        }
+
+        @include lg {
+            // aspect-ratio: auto;
+        }
+    }
+}
