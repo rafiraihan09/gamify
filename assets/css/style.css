@@ -1103,6 +1103,10 @@ button {
   top: 50%;
   transform: translateY(-50%);
   left: clamp(15px, 3.15vw, 60px);
+  background: rgba(255, 255, 255, 0.9);
+  padding: clamp(20px, 2.5vw, 40px);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
 }
 @media screen and (max-width: 575px) {
   .ul-banner-slide-txt {
